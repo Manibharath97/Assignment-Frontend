@@ -1,0 +1,65 @@
+<html>
+<head><title> Interpolation </title></head>
+<body>
+<b>{{ title}}-Interpolation </b><br>
+
+<p class="big">
+<b>Rectangle : {{Result()}}</b> <br>
+<b> Area of Rectangle 
+: {{getAreaRectangle()}}</b>
+<br>
+</p>
+
+
+<p class="big">
+<b>Square : {{Result1()}}</b> <br>
+<b> Area of Square 
+  : {{getAreaSquare()}}</b>
+  <br>
+</p>
+
+
+  <b>Triangle : {{Result2()}}</b> <br>
+  <b> Area of Triangle 
+    : {{getAreaTriangle()}}</b>
+
+    
+</body>
+</html>
+
+--------------------------------------------------------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'interp';
+
+  Result() {
+return 'L*B'
+
+  }
+  getAreaRectangle() {
+    return 10*20
+  }
+
+  Result1() {
+    return 'side*side'
+    
+      }
+      getAreaSquare() {
+        return 25*25
+      }
+
+      Result2() {
+        return '(B*H)/2'
+        
+          }
+          getAreaTriangle() {
+            return (10*20)/2
+          }
+
+}
